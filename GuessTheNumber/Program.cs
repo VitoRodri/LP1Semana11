@@ -11,7 +11,7 @@ namespace GuessTheNumber
         {
             Model model = new Model();
             Controller controller= new Controller(model);
-            View view= new View(controller,model);
+            IView view= new View(controller,model);
 
             controller.Run(view);
         }

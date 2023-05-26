@@ -8,7 +8,7 @@ namespace GuessTheNumber
     public class Controller
     {
         private readonly Model model;
-        private View view;
+        private IView view;
         private int guess;
         private int attempts;
         private bool guessedCorrectly= false;
@@ -19,7 +19,7 @@ namespace GuessTheNumber
 
         }
 
-        public void Run(View view)
+        public void Run(IView view)
         {
             this.view=view;
             view.Intro();
